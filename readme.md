@@ -1,7 +1,8 @@
 # Overview
 Through the course of this workshop you will be familiarized with how to build a mobile chat application in Ionic 2.
 
-Note: For guidance, there are feature branches available which list features to implement.  To view these branches use the command `git branch -a`.  Each feature branch has a readme file at the root directory of this repo that explains the feature to implement as well as tips to complete the effort.  You can access these feature branches by using the command `git checkout [feature-branch-name]`.
+## How to follow this workshop
+There are feature branches available in this repository.  To view them use the command `git branch -a`.  Each feature branch is accompanied by a "completed" feature branch to show how I completed the feature in this workshop for reference.  You can checkout any of these branches using the command `git checkout [branch-name]`.
 
 ### Technologies to be learned:
 

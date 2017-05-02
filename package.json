@@ -1,5 +1,5 @@
 {
-  "name": "ionic-hello-world",
+  "name": "MobileRealTimeChat",
   "version": "0.0.0",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -49,5 +49,5 @@
       "locator": "ios"
     }
   ],
-  "description": "MobileRealTimeChat-TestFirst: An Ionic project"
+  "description": "MobileRealTimeChat: An Ionic project"
 }

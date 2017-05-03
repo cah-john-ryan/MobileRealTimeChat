@@ -1,0 +1,29 @@
+### 4.messaging-service
+
+Objectives:
+Create a message service that will provide a list of messages.  The service will also provide the ability to add new messages.  
+Review instructions at https://github.com/angular/angularfire2 for guidance on how to use this library.
+
+1. Create a new file at src\models\ called "message.ts".  
+2. Create a class in this file named Message.  The Message class will have the below fields:
++----------------+--------+
+| Field Name     | type   |
++-------------------------+
+| $key           | string |
+|                |        |
+| userName       | string |
+|                |        |
+| messageContent | string |
+|                |        |
+| messageDate    | string |
++----------------+--------+
+Note: the $key field is a firebase populated field.
+
+3. Create the service by running the command `ionic g provider MessageService`.
+4. Import the Message model built in #1-2.
+5. On initialization the service will create a list binding to "/messages" in firebase.
+6. Add a public variable named "messages" to provide messages from angularfire/firebase.
+7. Add a public method to the service called "addMessage" that has the below traits:
+  - Will accept a Message as a parameter.
+  - Will update the messageDate property of the provided message to the current date.
+  - Will push the new message into the messages you created in step #6.

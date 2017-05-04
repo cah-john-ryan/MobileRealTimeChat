@@ -23,6 +23,9 @@
     <button (click)="sendPhoto()" item-left ion-button>
       <ion-icon name="camera"></ion-icon>
     </button>
+    <button (click)="sendLocation()" item-left ion-button>
+      <ion-icon name="locate"></ion-icon>
+    </button>
     <!-- Not using ion-input due to undesirable keyboard behavior -->
     <input id="current-message-input" [(ngModel)]="currentMessage" type="text" placeholder="Message"/>
     <button (click)="send(currentMessage)" item-right ion-button>SEND</button>

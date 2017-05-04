@@ -2,19 +2,21 @@ import {Component} from "@angular/core";
 import {MessageService} from "../../providers/message-service";
 import {Message} from "../../models/message";
 import {Camera, CameraOptions} from "@ionic-native/camera";
+import {Geolocation} from "@ionic-native/geolocation";
 
 export const imageContentPrefix = 'data:image/jpeg;base64,';
+export const locationDataContentPrefix = 'geo:';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [MessageService, Camera]
+  providers: [MessageService, Camera, Geolocation]
 })
 export class HomePage {
   public USER_NAME_CONSTANT = 'John Ryan';
   public currentMessage: string;
 
-  constructor(private messageService: MessageService, private camera: Camera) {
+  constructor(private messageService: MessageService, private camera: Camera, private geolocation: Geolocation) {
   }
 
   public send(messageContent: string) {
@@ -35,6 +37,14 @@ export class HomePage {
       this.buildAndSendMessage(base64Image);
     }, (error) => {
       this.buildAndSendMessage('photo capture error: ' + JSON.stringify(error));
+    });
+  }
+
+  public sendLocation() {
+    this.geolocation.getCurrentPosition().then((resp) => {
+      this.buildAndSendMessage(locationDataContentPrefix + resp.coords.latitude + ',' + resp.coords.longitude);
+    }).catch((error) => {
+      this.buildAndSendMessage('error getting location: ' + JSON.stringify(error));
     });
   }
 

@@ -45,4 +45,8 @@ export class HomePage {
     this.messageService.addMessage(newMessage);
     this.currentMessage = "";
   }
+
+  public doesThisMessageContainAnImage(message: Message) {
+    return message.messageContent.indexOf(imageContentPrefix) !== -1;
+  }
 }

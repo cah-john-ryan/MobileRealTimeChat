@@ -20,6 +20,6 @@
 <ion-footer>
   <ion-item>
     <ion-input type="text" placeholder="Message" [(ngModel)]="currentMessage" item-left></ion-input>
-    <button (click)="send()" item-right ion-button>SEND</button>
+    <button (click)="send(currentMessage)" item-right ion-button>SEND</button>
   </ion-item>
 </ion-footer>

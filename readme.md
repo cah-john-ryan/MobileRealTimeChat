@@ -33,3 +33,13 @@ Mobile device setup (app install):
 Account setup:
 - GitHub: https://github.com/
 - Ionic: http://ionicframework.com/
+
+| command                   |                                                                                                                                         |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| npm install               | Install's ALL package dependencies you need to get your app running. (it uses the package.json file to identify those dependencies)     |
+| ionic serve               | This will compile\transpile your code and then spin up local web hosting so that you can debug in your browser at http://localhost:8100 |
+| ionic upload              | This will push your compiled code to the Ionic View application on your phone                                                           |
+| git branch                | This will list the branches you can switch to (including the 'vardan' branch which is your own.                                         |
+| git checkout <branchName> | This will switch your codebase over to the branch you entered in the command.                                                           |
+| git add -A                | (commit prep) This will stage all changes present for your upcoming commit.                                                             |
+| git commit -m "<message>" | This will commit all changes you have staged to the branch you are on.                                                                  |

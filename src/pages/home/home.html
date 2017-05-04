@@ -19,7 +19,11 @@
 </ion-content>
 <ion-footer>
   <ion-item>
-    <ion-input type="text" placeholder="Message" [(ngModel)]="currentMessage" item-left></ion-input>
+    <button (click)="sendPhoto()" item-left ion-button>
+      <ion-icon name="camera"></ion-icon>
+    </button>
+    <!-- Not using ion-input due to undesirable keyboard behavior -->
+    <input id="current-message-input" [(ngModel)]="currentMessage" type="text" placeholder="Message"/>
     <button (click)="send(currentMessage)" item-right ion-button>SEND</button>
   </ion-item>
 </ion-footer>

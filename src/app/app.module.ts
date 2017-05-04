@@ -9,6 +9,7 @@ import {StatusBar} from "@ionic-native/status-bar";
 import {SplashScreen} from "@ionic-native/splash-screen";
 import {AngularFireModule} from "angularfire2";
 import {ConfigurationService} from "../providers/configuration-service";
+import {LinkyModule} from "angular-linky";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {ConfigurationService} from "../providers/configuration-service";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(ConfigurationService.firebaseConfig)
+    AngularFireModule.initializeApp(ConfigurationService.firebaseConfig),
+    LinkyModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

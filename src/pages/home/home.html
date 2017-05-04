@@ -13,7 +13,7 @@
         <ion-icon class="anonymousUserImageIcon" name="person"></ion-icon>
       </ion-avatar>
       <p>{{message.userName}}</p>
-      <h2>{{message.messageContent}}</h2>
+      <h2 [innerHTML]="message.messageContent | linky"></h2>
     </ion-item>
   </ion-list>
 </ion-content>

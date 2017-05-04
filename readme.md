@@ -34,6 +34,8 @@ Account setup:
 - GitHub: https://github.com/
 - Ionic: http://ionicframework.com/
 
+A list of helpful commands in case you are not very familiar with npm, ionic, or git:
+
 | command                   |                                                                                                                                         |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | npm install               | Install's ALL package dependencies you need to get your app running. (it uses the package.json file to identify those dependencies)     |
